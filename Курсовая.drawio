@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-03T11:07:50.387Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="FFSaRl5jsISa7frIP4jh" version="21.3.7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-03T11:09:28.214Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="h2_xegHuyXddKYB4CZSR" version="21.3.7" type="github">
   <diagram id="s9_FCZtg-uALN-O0ZUHf" name="Страница 1">
     <mxGraphModel dx="2022" dy="1832" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -216,7 +216,7 @@
             <mxRectangle width="30" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="OV0SFWAsMs0vF2QBaHkd-123" value="order date" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" parent="OV0SFWAsMs0vF2QBaHkd-121" vertex="1">
+        <mxCell id="OV0SFWAsMs0vF2QBaHkd-123" value="order_date" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" parent="OV0SFWAsMs0vF2QBaHkd-121" vertex="1">
           <mxGeometry x="30" width="150" height="30" as="geometry">
             <mxRectangle width="150" height="30" as="alternateBounds" />
           </mxGeometry>
