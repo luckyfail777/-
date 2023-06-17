@@ -1,0 +1,66 @@
+CREATE DATABASE Advertising_agency;
+
+CREATE TABLE Employee (
+    ID SERIAL PRIMARY KEY,
+    login VARCHAR(50) NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    phone VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE Client (
+    ID SERIAL PRIMARY KEY,
+    organization_name VARCHAR(100) NOT NULL,
+    surname_representative VARCHAR(50) NOT NULL,
+    name_representative VARCHAR(50) NOT NULL,
+    patronymic_representative VARCHAR(50),
+    phone VARCHAR(20) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    description VARCHAR(500)
+);
+
+CREATE TABLE Advertising_type (
+    ID SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    min_price MONEY NOT NULL
+);
+
+CREATE TABLE Service (
+    ID SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE OrderDetails (
+    ID SERIAL PRIMARY KEY,
+    ID_order INT NOT NULL,
+    ID_service INT NOT NULL,
+    status BOOLEAN NOT NULL
+);
+
+CREATE TABLE Ordering (
+    ID SERIAL PRIMARY KEY,
+    ID_Client INT NOT NULL,
+    ID_Employee INT NOT NULL,
+    order_date DATE NOT NULL,
+    ID_Advertising_type INT NOT NULL,
+    cost MONEY NOT NULL
+);
+
+ALTER TABLE ordering ADD CONSTRAINT fk_ordering_employee
+    FOREIGN KEY (ID_employee)
+    REFERENCES employee(ID);
+   
+   ALTER TABLE ordering ADD CONSTRAINT fk_ordering_advertising_type
+    FOREIGN KEY (ID_advertising_type)
+    REFERENCES Advertising_type(ID);
+   
+   ALTER TABLE OrderDetails ADD CONSTRAINT fk_orderdetails_ordering
+    FOREIGN KEY (ID_order)
+    REFERENCES Ordering(ID);
+   
+   ALTER TABLE OrderDetails ADD CONSTRAINT fk_orderdetails_service
+    FOREIGN KEY (ID_service)
+    REFERENCES Service(ID);
+   
+   ALTER TABLE ordering ADD CONSTRAINT fk_ordering_client
+    FOREIGN KEY (ID_client)
+    REFERENCES CLient(ID);
